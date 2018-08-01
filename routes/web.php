@@ -19,8 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/employees','EmployerController@showEmployees')->name('employees');
 Route::get('/companies','CompanyController@showCompanies')->name('companies');
+Route::get('/addCompany','CompanyController@addCompany')->name('addCompany');
+
+
+Route::get('/employees','EmployerController@showEmployees')->name('employees');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

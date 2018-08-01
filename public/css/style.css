@@ -22,6 +22,10 @@ li {
     /*width: 80%;*/
     /*border: 1px solid blue;*/
 /*}*/
+
+/*.container {*/
+    /*display: flex;*/
+/*}*/
 .wrapper {
     display: flex;
 }
@@ -45,9 +49,33 @@ li {
 }
 .content_side {
     width: 80%;
-    border: 1px solid black;
+    border-left: 4px solid green;
+    border-top: 4px solid green;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+}
+.right_content {
+    width: 80%;
+    border-left: 4px solid green;
+    border-top: 4px solid green;
+    height: 100vh;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    box-sizing: border-box;
+}
+.companies,.employers {
+    width: 100%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.companies th,tr , .employers th,tr {
+    text-align: center;
+}
+
+.add_company,.add_employer  {
+    text-align: right;
 }
