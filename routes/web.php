@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/employees','EmployerController@showEmployees')->name('employees');
+Route::get('/companies','CompanyController@showCompanies')->name('companies');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

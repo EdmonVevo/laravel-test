@@ -1,0 +1,53 @@
+body,html,*{
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+/*.admin_nav {*/
+    /*width: 20%;*/
+    /*border: 1px solid red;*/
+/*}*/
+
+
+
+
+/*.admin_pages {*/
+    /*width: 80%;*/
+    /*border: 1px solid blue;*/
+/*}*/
+.wrapper {
+    display: flex;
+}
+
+.wrapper li {
+    margin: 5px 10px;
+}
+
+.wrapper li a {
+    font-size:20px;
+    border: 2px double forestgreen;
+    padding: 2px 10px;
+}
+
+.wrapper li a:hover {
+    text-decoration: none;
+    background-color: darkgrey;
+}
+.navigation_side {
+  width: 20%;
+}
+.content_side {
+    width: 80%;
+    border: 1px solid black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
