@@ -76,8 +76,8 @@
                 @else
 
                     <div class="navigation_side">
-                        <li><a href="{{route('companies')}}">Companies</a></li>
-                        <li><a href="{{route('employees')}}">Employees</a></li>
+                        <li><a href="{{route('companies.index')}}">Companies</a></li>
+                        <li><a href="{{route('employees.index')}}">Employees</a></li>
                     </div>
 
                 @endguest

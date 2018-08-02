@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="right_content">
-        <div class="addEmp save">
+        <div class="addComp save">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -23,34 +23,32 @@
                 </div>
                 {{session()->forget('success')}}
             @endif
-            <form method="post" action="{{route('employees.store')}}">
+            <form method="post" action="{{route('companies.update',$company->id)}}" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 <div class="form-group">
-                    <label for="firstname">Firstname</label>
-                    <input type="text" class="form-control" id="firstname" aria-describedby="firstname" placeholder="Enter firstname" name="firstname">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Lastname</label>
-                    <input type="text" class="form-control" id="lastname" aria-describedby="lastname" placeholder="Enter lastname" name="lastname">
-                </div>
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" class="form-control" id="company" aria-describedby="company" placeholder="Enter company" name="company">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter name" name="name" value="{{$company->name}}">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email"  value="{{$company->email}}">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Upload company logo</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="logo">
+                    <small id="logo" class="form-text text-muted">Min size 100x100</small>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="text" class="form-control" id="phone" placeholder="phone" name="phone">
+                    <label for="website">Website</label>
+                    <input type="text" class="form-control" id="website" placeholder="website" name="website"  value="{{$company->website}}">
                 </div>
 
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update company</button>
             </form>
         </div>
     </div>

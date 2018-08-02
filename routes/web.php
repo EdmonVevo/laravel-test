@@ -24,6 +24,10 @@ Route::get('/addCompany','CompanyController@addCompany')->name('addCompany');
 
 
 Route::get('/employees','EmployerController@showEmployees')->name('employees');
+Route::resources([
+    'companies'=>'CompanyController',
+    'employees'=>'EmployerController'
+]);
 
 Auth::routes();
 
